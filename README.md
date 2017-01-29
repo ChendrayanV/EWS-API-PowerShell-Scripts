@@ -83,18 +83,11 @@ A PowerShell script to create a task for the user(s)
 > Creates a new task with a subject 'New Task 1' and body as 'Check This!' (Inlined in the script) for more than one user. 
 
 # New-xMeeting 
-A PowerShell script to create a new meeting request. Few properties like ```$Start```, ```$End``` and ```$Subject``` are inlined. Modify the value for below code as required 
+A PowerShell script to create a new meeting request. Few properties like ```$Start```, ```$End``` and ```$Subject``` are inlined. 
+Modify it or parameterize it as required. For example, we can change start and end date here! 
 >```$Meeting.Start = [datetime]::Now.AddDays(2)```
 >
 >```$Meeting.End = $Meeting.Start.AddHours(1)```
->
->```$Meeting.Subject = "Managed EWS API Demo in PowerShell"```
->
->```$Meeting.RequiredAttendees.Add('user2@tenant.onmicrosoft.com')```
->
->```$Meeting.OptionalAttendees.Add('MostafaSelim@tenant.onmicrosoft.com')```
->
->```$Meeting.ReminderMinutesBeforeStart = 15```
 >
 Note: Apply the logic for date and time using ```[datetime]```
 ### Example 1
