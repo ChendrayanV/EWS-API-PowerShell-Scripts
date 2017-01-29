@@ -126,7 +126,6 @@ Define the location.
 > Books an appointment for more than one user with same information. 
 
 # Get-xPhoneAlert
-<center>Demo</center>
 A customer asked me a solution to play a phone call when there is a Important email. Yes, we need to do Event Subscriptions but for a 
 demo we shared a piece of PS Script which scans inbox and dials the given telephone to and play the text. Below is the logic and ensure 
 you have UM (Unified Messaging) enabled mailbox! 
@@ -134,11 +133,12 @@ Get the ItemID of the mail which is required for the PlayOnPhoneMethod
 > ```$ItemId = $Results.Items[0].Id.UniqueId```
 >
 Invoke the method UnifiedMessaging and PlayOnPhone with two overloads (ItemId and PhoneNumber)
+>
 > ```$Call = $ExchangeService.UnifiedMessaging.PlayOnPhone($ItemId, <+CountryCode><Number>)```
 >
 
 ### Example 1
-> ```Get-xPhoneAlert -MailBox chendrayan.venkatesan@contoso.com -PhoneNumber +91<Number> -Credential chendrayan.venkatesan@contoso```
+> ```Get-xPhoneAlert -MailBox chendrayan.venkatesan@contoso.com -PhoneNumber +91<Number> -Credential chendrayan.venkatesan@contoso.com```
 >
 > Scan the inbox of chendrayan.venkatesan@contoso.com to retrieve High priority email and play the text on phone 
 
