@@ -139,8 +139,7 @@ Invoke the refresh method which is of type ```[void]```
 > ```$Call.Refresh()```
 >
 Inorder to get the email which is marked as Important we used the below one liner - Apply a search filter and get email marked as High 
-> ```$SearchFilter = [Microsoft.Exchange.WebServices.Data.SearchFilter+IsEqualTo]::new([Microsoft.Exchange.WebServices.Data.EmailMessageSchema]::Importance,```
-                     ```"High")```
+> ```$SearchFilter = [Microsoft.Exchange.WebServices.Data.SearchFilter+IsEqualTo]::new([Microsoft.Exchange.WebServices.Data.EmailMessageSchema]::Importance,"High")```
 >
 Scan the inbox with ```$SearchFilter``` and ```$View``` (Here it's the first item which is marked as High)
 > ```$Results = $ExchangeService.FindItems([Microsoft.Exchange.WebServices.Data.WellKnownFolderName]::Inbox,$SearchFilter,$View)```
