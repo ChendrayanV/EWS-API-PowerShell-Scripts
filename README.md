@@ -133,7 +133,7 @@ Get the ItemID of the mail which is required for the PlayOnPhoneMethod
 > ```$ItemId = $Results.Items[0].Id.UniqueId```
 >
 Invoke the method UnifiedMessaging and PlayOnPhone with two overloads (ItemId and PhoneNumber)
-> ```$Call = $ExchangeService.UnifiedMessaging.PlayOnPhone($ItemId, "<+CountryCode><Number>")```
+> ```$Call = $ExchangeService.UnifiedMessaging.PlayOnPhone($ItemId, <+CountryCode><Number>)```
 >
 Invoke the refresh method which is of type ```[void]```
 > ```$Call.Refresh()```
